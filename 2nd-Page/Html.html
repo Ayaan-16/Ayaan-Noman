@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopify Test Project</title>
+    <link rel="stylesheet" href="./Style.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Lustria&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Add any additional styles here */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <div class="heading">TISSO vision in the wild</div>
+
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="./Images/1.png" alt="Product 1" />
+                <div class="plus-button plus-button-1" onclick="openModal(1)">+</div>
+            </div>
+            <div class="gallery-item">
+                <img src="./Images/2.png" alt="Product 2" />
+                <div class="plus-button plus-button-2" onclick="openModal(2)">+</div>
+            </div>
+            <div class="gallery-item">
+                <img src="./Images/3.png" alt="Product 3" />
+                <div class="plus-button plus-button-3" onclick="openModal(3)">+</div>
+            </div>
+            <div class="gallery-item">
+                <img src="./Images/4.png" alt="Product 4" />
+                <div class="plus-button plus-button-4" onclick="openModal(4)">+</div>
+            </div>
+            <div class="gallery-item">
+                <img src="./Images/5.png" alt="Product 5" />
+                <div class="plus-button plus-button-5" onclick="openModal(5)">+</div>
+            </div>
+            <div class="gallery-item">
+                <img src="./Images/6.png" alt="Product 6" />
+                <div class="plus-button plus-button-6" onclick="openModal(6)">+</div>
+            </div>
+        </div>
+
+        <!-- Container for small modals -->
+        <div id="small-modals-container"></div>
+
+        <!-- Modal Structure -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <button class="close-btn" onclick="closeModal()">&#10005;</button>
+                <div class="modal-body">
+                    <div class="modal-image">
+                        <img id="modal-img" src="" alt="Modal Image" />
+                    </div>
+                    <div class="modal-info">
+                        <div class="modal-title" id="modal-title">Product Title</div>
+                        <div class="modal-price" id="modal-price">980.00€</div>
+                        <div class="modal-description" id="modal-description">
+                            This piecewear swimsuit features stunning details...
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-controls">
+                    <div class="buttons">
+                        <label for="color">Color</label>
+                        <div class="btn-container">
+                            <div class="btn first-btn" onclick="handleClick(this)"></div>
+                            <div class="btn second-btn" onclick="handleClick(this)"></div>
+                            <div class="active-background" id="activeBackground"></div>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <label for="size">Size</label>
+                        <div class="custom-select" onclick="toggleDropdown()">
+                            <div class="selected">Choose your size</div>
+                            <div class="options">
+                                <div class="option" data-value="xs">XS</div>
+                                <div class="option" data-value="s">S</div>
+                                <div class="option" data-value="m">M</div>
+                                <div class="option" data-value="l">L</div>
+                                <div class="option" data-value="xl">XL</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="cart-btn" onclick="addToCart()">
+                        ADD TO CART <span class="arrow"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./javascript.js"></script>
+  </body>
+</html>
