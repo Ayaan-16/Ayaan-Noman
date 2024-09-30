@@ -223,11 +223,6 @@ function addToCart() {
     ? document.querySelector(".custom-select .selected").innerText
     : null;
 
-  if (!selectedColor || selectedSize === "Choose your size") {
-    alert("Please select a color and size before adding to cart.");
-    return;
-  }
-
   const variantId =
     variants[currentProductId]?.color[selectedColor]?.[selectedSize];
 
@@ -236,13 +231,24 @@ function addToCart() {
     return;
   }
 
+  // Prepare the cart items
+  const itemsToAdd = [
+    {
+      id: variantId,
+      quantity: 1,
+    },
+  ];
+
+  // Check if the selected variant is "Black" and "Medium"
+  if (selectedColor === "Black" && selectedSize === "M") {
+    itemsToAdd.push({
+      id: 40120893309057,
+      quantity: 1,
+    });
+  }
+
   const data = {
-    items: [
-      {
-        id: variantId,
-        quantity: 1,
-      },
-    ],
+    items: itemsToAdd,
   };
 
   fetch("/cart/add.js", {
@@ -260,7 +266,7 @@ function addToCart() {
       return response.json();
     })
     .then((data) => {
-      alert("Item added to cart!");
+      alert("Item(s) added to cart!");
       closeModal();
     })
     .catch((error) => {
