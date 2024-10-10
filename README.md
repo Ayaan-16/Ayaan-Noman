@@ -1,10 +1,26 @@
-<h2 align="center">
+<h1 align="center">
   Shopify Store Project<br/>
-</h2>
+</h1>
 <br/>
-<img src="./a.png">
-<img src="./aa.png">
-<img src="./M.png">
+<h1 align="center">
+  Desktop<br/>
+</h1>
+<p align="center">
+  <img src="./a.png" alt="Desktop View">
+</p>
+<h1 align="center">
+  Product ShowCase<br/>
+</h1>
+<p align="center">
+  <img src="./aa.png" alt="Product Showcase">
+</p>
+<h1 align="center">
+  Mobile<br/>
+</h1>
+<p align="center">
+  <img src="./M.png" alt="Mobile View">
+</p>
+
 
 ## TL;DR
 
